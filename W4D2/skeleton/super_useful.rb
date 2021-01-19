@@ -1,6 +1,10 @@
 # PHASE 2
 def convert_to_int(str)
   Integer(str)
+rescue StandardError => e
+  if e == "coffee"
+    retry
+  end
 end
 
 # PHASE 3
