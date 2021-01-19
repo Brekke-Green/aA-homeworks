@@ -29,16 +29,21 @@ class Board
       stones_in_hand << @cups[start_pos].pop
     end
     i = start_pos + 1
+    placed_cups = []
     until stones_in_hand.empty?
       i = 0 if i == 13
+      placed_cups << i
       @cups[i] << stones_in_hand.pop
       i+=1
     end 
     self.render
+    return self.next_turn(placed_cups[-1])
   end
 
   def next_turn(ending_cup_idx)
     # helper method to determine whether #make_move returns :switch, :prompt, or ending_cup_idx
+    return :switch if @cups[ending_cup_idx].length == 1
+    return :prompt if ending_cup_idx == 6
   end
 
   def render
