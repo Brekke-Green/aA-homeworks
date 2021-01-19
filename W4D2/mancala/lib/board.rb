@@ -24,6 +24,17 @@ class Board
   end
 
   def make_move(start_pos, current_player_name)
+    stones_in_hand = []
+    until @cups[start_pos].empty?  
+      stones_in_hand << @cups[start_pos].pop
+    end
+    i = start_pos + 1
+    until stones_in_hand.empty?
+      i = 0 if i == 13
+      @cups[i] << stones_in_hand.pop
+      i+=1
+    end 
+    self.render
   end
 
   def next_turn(ending_cup_idx)
