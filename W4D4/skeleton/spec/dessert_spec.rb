@@ -9,7 +9,10 @@ describe Dessert do
   let(:chef) { double("chef") }
 
   describe "#initialize" do
+    let(:new_dessert) { Dessert.new("new_dessert")}  
+
     it "sets a type"
+      expect(new_dessert.type).to eq("new_dessert")
 
     it "sets a quantity"
 
