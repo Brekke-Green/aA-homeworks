@@ -11,8 +11,9 @@ describe Dessert do
   describe "#initialize" do
     let(:new_dessert) { Dessert.new("new_dessert")}  
 
-    it "sets a type"
+    it "sets a type" do
       expect(new_dessert.type).to eq("new_dessert")
+    end
 
     it "sets a quantity"
 
