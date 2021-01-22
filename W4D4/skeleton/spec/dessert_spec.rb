@@ -12,14 +12,21 @@ describe Dessert do
     let(:new_dessert) { Dessert.new("new_dessert")}  
 
     it "sets a type" do
+      
       expect(new_dessert.type).to eq("new_dessert")
     end
 
-    it "sets a quantity"
+    it "sets a quantity" do 
 
-    it "starts ingredients as an empty array"
+    end 
 
-    it "raises an argument error when given a non-integer quantity"
+    it "starts ingredients as an empty array" do 
+
+    end 
+
+    it "raises an argument error when given a non-integer quantity" do 
+
+    end 
   end
 
   describe "#add_ingredient" do
