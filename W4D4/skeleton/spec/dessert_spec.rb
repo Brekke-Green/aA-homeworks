@@ -6,10 +6,10 @@ Instructions: implement all of the pending specs (the `it` statements without bl
 =end
 
 describe Dessert do
-  let(:chef) { double("chef") }
+  let(:chef) { double("chef", :name => "larry") }
 
   describe "#initialize" do
-    let(:new_dessert) { Dessert.new("new_dessert")}  
+    let(:new_dessert) { Dessert.new("new_dessert", 4, chef)}  
 
     it "sets a type" do
       
